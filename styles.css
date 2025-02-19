@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .btn {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -12,13 +16,13 @@
     color: white;
     text-decoration: none;
     border-radius: 4px;
-    transition: background 0.3s ease;
     margin-top: 5px;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #000000, #444444, #565656);
+    background: url('./assets/background.jpg') no-repeat center center fixed; /* Imagen de fondo con efecto parallax */
+    background-size: cover;
     min-height: 100vh;
     padding: 2rem;
 }
@@ -67,11 +71,21 @@ hr {
 }
 
 section {
-    background: rgb(255, 255, 255);
+    background-color: white;
     border-radius: 10px;
     padding: 2rem;
     margin-bottom: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 70vh; /* Ocupa el 100% de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 1s ease-in-out; /* Transición de opacidad */
+}
+
+section.visible {
+    opacity: 1; /* Visible cuando se añade la clase 'visible' */
 }
 
 .grid-proyectos {
