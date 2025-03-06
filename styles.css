@@ -5,12 +5,12 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
 .btn {
-    display: inline-block;
+    dissplay: inline-block;
     padding: 0.5rem 1rem;
     background: #333;
     color: white;
@@ -21,7 +21,8 @@ html{
 
 body {
     font-family: Arial, sans-serif;
-    background: url('./assets/background.jpg') no-repeat center center fixed; /* Imagen de fondo con efecto parallax */
+    background: url('./assets/background.jpg') no-repeat center center fixed;
+    /* Imagen de fondo con efecto parallax */
     background-size: cover;
     min-height: 100vh;
     padding: 2rem;
@@ -64,7 +65,6 @@ header {
     }
 }
 
-
 hr {
     border: 1px solid white;
     margin: 1rem 0;
@@ -76,16 +76,20 @@ section {
     padding: 2rem;
     margin-bottom: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: 70vh; /* Ocupa el 100% de la pantalla */
+    height: 70vh;
+    /* Ocupa el 100% de la pantalla */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    opacity: 0; /* Inicialmente oculto */
-    transition: opacity 1s ease-in-out; /* Transición de opacidad */
+    opacity: 0;
+    /* Inicialmente oculto */
+    transition: opacity 1s ease-in-out;
+    /* Transición de opacidad */
 }
 
 section.visible {
-    opacity: 1; /* Visible cuando se añade la clase 'visible' */
+    opacity: 1;
+    /* Visible cuando se añade la clase 'visible' */
 }
 
 .grid-proyectos {
@@ -125,18 +129,7 @@ section.visible {
     background: #555;
 }
 
-@media (max-width: 768px) {
-    body {
-        padding: 1rem;
-    }
-
-    .grid-proyectos {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* IMAGENES */
-
 
 .proyecto img {
     width: 100%;
@@ -177,21 +170,51 @@ header img:hover {
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
 }
 
-/* RESPONSIVE DE IPHONE */
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 1rem;
+}
 
-@media (max-width: 430px) {
-    body {
-        background-color: black;
-    }
+section {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    height: auto;
+    min-height: 300px;
+}
 
-    .nombre {
-        margin-top: 50px;
-        font-size: 1.2rem;
-        font-weight: 900;
-    }
+/* Bento Grid Layout for Sections */
+.info-personal {
+    grid-column: span 2;
+    grid-row: span 1;
+}
 
-    .rol {
-        font-size: 2rem;
-    }
+.tecnologias {
+    grid-column: span 2;
+    grid-row: span 1;
+}
 
+.proyectos {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+.curriculum {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+section:last-child {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+/* Hover effects for sections */
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
