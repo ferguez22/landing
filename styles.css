@@ -1,3 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+    background: linear-gradient(to right, #2780b0, #09454d);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.nombre {
+    color: #ffffff;
+    font-size: 5rem;
+    font-family: "Dangrek", sans-serif;
+    text-shadow: 0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 30px #0ff,
+        0 0 40px #0ff,
+        0 0 50px #0ff,
+        0 0 60px #0ff,
+}
+
+hr {
+    border: 1px solid white;
+    margin: 1rem 0;
+}
+
+.rol {
+    color: #fff;
+    font-size: 2.5rem;
+    text-shadow: 0 0 0px #fff,
+        0 0 10px #fff,
+        0 0 10px rgb(17, 0, 255),
+        0 0 10px #0ff;
+    animation: neon 1s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+    from {
+        text-shadow: 0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 20px #0ff,
+            0 0 30px #0ff,
+    }
+
+    to {
+        text-shadow: 0 0 5px #fff,
+            0 0 5px #fff,
+            0 0 10px #0ff,
+            0 0 10px #0ff,
+            0 0 10px rgba(0, 255, 255, 0.226);
+    }
+}
+
+section {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 300px;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: opacity 1s ease-in-out, all 0.3s ease;
+}
+
 .link-boton {
     display: flex;
     flex-direction: column;
@@ -43,69 +120,6 @@
     &:hover {
         transform: scale(1.1);
     }
-}
-
-body {
-    font-family: Arial, sans-serif;
-    padding: 2rem;
-    background: linear-gradient(to right, #2780b0, #09454d);
-}
-
-header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.nombre {
-    color: #ffffff;
-    font-size: 2.5rem;
-}
-
-.rol {
-    color: #fff;
-    font-size: 2.5rem;
-    text-shadow: 0 0 0px #fff,
-        0 0 10px #fff,
-        0 0 10px rgb(17, 0, 255),
-        0 0 10px #0ff;
-    animation: neon 1s ease-in-out infinite alternate;
-}
-
-@keyframes neon {
-    from {
-        text-shadow: 0 0 5px #fff,
-            0 0 10px #fff,
-            0 0 20px #0ff,
-            0 0 30px #0ff,
-    }
-
-    to {
-        text-shadow: 0 0 5px #fff,
-            0 0 5px #fff,
-            0 0 10px #0ff,
-            0 0 10px #0ff,
-            0 0 10px rgba(0, 255, 255, 0.226);
-    }
-}
-
-hr {
-    border: 1px solid white;
-    margin: 1rem 0;
-}
-
-section {
-    background-color: white;
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: 70vh;
-    /* Ocupa el 100% de la pantalla */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* Inicialmente oculto */
-    transition: opacity 1s ease-in-out;
-    /* Transición de opacidad */
 }
 
 .grid-proyectos {
@@ -178,22 +192,8 @@ header img:hover {
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
 }
 
-main {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    padding: 1rem;
-}
 
-section {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-radius: 16px;
-    padding: 2rem;
-    transition: all 0.3s ease;
-    height: auto;
-    min-height: 300px;
-}
+
 
 /* Bento Grid Layout for Sections */
 .info-personal {
@@ -245,6 +245,11 @@ section:last-child {
 
 /* Media queries de cuadro figma */
 @media (max-width: 768px) {
+
+    .nombre {
+        font-size: 3rem;
+    }
+
     .figma iframe {
         width: 100%;
         height: 350px;
@@ -263,6 +268,11 @@ section:last-child {
 }
 
 @media (max-width: 430px) {
+
+    .nombre {
+        font-size: 1rem;
+    }
+
     .figma iframe {
         width: 100%;
         height: 250px;
