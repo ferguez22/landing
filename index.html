@@ -51,7 +51,28 @@
             </p>
         </section>
 
-        <!-- TERCER Cuadro con las tecnologias que se -->
+        <!-- TERCER Cuadro con botones de cv, github y linkedin -->
+        <section class="curriculum">
+            <div class="links">
+                <a href="https://drive.google.com/file/d/1Njpf5vRWNa10FxaxUbxOBViiQC4kRiDh/view?usp=sharing"
+                    target="_blank" class="link-boton">
+                    <img src="./assets/cv.svg" alt=""> CV
+
+                </a>
+                <a href="https://github.com/ferguez22" target="_blank" class="link-boton">
+                    <img src="./assets/github.svg" alt=""> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/fernando-rodriguez2501" target="_blank" class="link-boton">
+                    <img src="./assets/linkedin.svg" alt="">Linkedin
+                </a>
+            </div>
+            <p>
+                Puedes descargar mi currículum, visitar mi perfil de GitHub para ver más proyectos o
+                conectar conmigo en LinkedIn.
+            </p>
+        </section>
+
+        <!-- CUARTO Cuadro con las tecnologias que se -->
         <section class="tecnologias">
             <h2><i class="fas fa-laptop-code"></i> Tecnologías</h2>
             <h5>HTML | CSS | JavaScript | TypeScript | BootStrap | Angular | MySQL | MongoDB</h5>
@@ -62,7 +83,7 @@
             </p>
         </section>
 
-        <!-- CUARTO Cuadro con mis proyectos -->
+        <!-- QUINTO Cuadro con mis proyectos -->
         <section class="proyectos">
             <h2><i class="fas fa-project-diagram"></i> Mis Proyectos</h2>
             <div class="grid-proyectos">
@@ -93,31 +114,21 @@
             </div>
         </section>
 
-        <!-- QUINTO Cuadro con botones de cv, github y linkedin -->
-        <section class="curriculum text-center my-4">
-            <div class="button-container">
-                <a href="https://drive.google.com/file/d/1Njpf5vRWNa10FxaxUbxOBViiQC4kRiDh/view?usp=sharing"
-                    target="_blank" class="btn btn-lg">
-                    <i class="far fa-file-pdf"></i> Mi Curriculum
-                </a>
-                <a href="https://github.com/ferguez22" target="_blank" class="btn btn-lg">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="https://www.linkedin.com/in/fernando-rodriguez2501" target="_blank" class="btn btn-lg">
-                    <i class="fab fa-linkedin"></i> Linkedin
-                </a>
-            </div>
-            <p>
-                Puedes descargar mi currículum, visitar mi perfil de GitHub para ver más proyectos o
-                conectarte conmigo en LinkedIn.
-            </p>
-        </section>
-
         <!-- SEXTO cuadro con vista previa de diseños en figma -->
-        <section>
+        <section class="figma">
+            <h2>Diseños Figma en desarrollo...</h2>
             <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
                 src="https://embed.figma.com/design/Ty3NgmoGKpNQbns0Ur1vpG/LittleBobby-%26-Grog?embed-host=share"
                 allowfullscreen></iframe>
+        </section>
+
+        <!-- SEPTIMO cuadro con paginas que creo que podrian ser utiles para otros desarrolladores -->
+        <section>
+            <h2><i class="fas fa-bookmark"></i> Páginas que creo que te ahorraran tiempo para tus trabajos como
+                programador :)</h2>
+            <ul>
+                <li><a href="https://animatedbackgrounds.me/" target="_blank">Animated Backgrounds</a></li>
+                <li><a href="https://www.curated.design/" target="_blank">Inspiración en diseño web</a></li>
         </section>
 
     </main>
@@ -125,23 +136,7 @@
     <!-- JS de Fancybox PArallax Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
-    <script src="node_modules/scrollreveal/dist/scrollreveal.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="animations.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            ScrollReveal().reveal('.info-personal', { delay: 100, distance: '110px', origin: 'bottom' });
-            ScrollReveal().reveal('.tecnologias', { delay: 100, distance: '50px', origin: 'bottom' });
-            ScrollReveal().reveal('.proyectos', { delay: 100, distance: '50px', origin: 'bottom' });
-            ScrollReveal().reveal('.curriculum', { delay: 100, distance: '50px', origin: 'bottom' });
-        });
-
-        // Desplazar al inicio al recargar la página
-        window.onbeforeunload = function () {
-            window.scrollTo(0, 0);
-        };
-    </script>
-
 </body>
 
 </html>
